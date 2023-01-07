@@ -9,7 +9,7 @@ The only dependencies are [Eigen](https://eigen.tuxfamily.org/) and [yaml-cpp](h
 
 ```bash
 sudo apt-get update
-sudo apt-get install libeigen3-dev libyaml-cpp-dev
+sudo apt-get install libeigen3-dev
 ```
 
 Then, simply type the following commands in the command line:
@@ -19,19 +19,16 @@ To build the library and the example
 mkdir build
 cd build
 cmake ..
-make
+make libGraphCpp_bin
 ```
 
 to build and run the tests:
 ```bash
-mkdir build_tests
-cd build_tests
-cmake ../tests
-make
+make libGraphCpp_test_bin
 ```
 
 ## Features:
-* graph instanciation from nodes list and edges list or adjacency matrix (`Eigen::MatrixXd` for nodes position and `Eigen::MatrixXi` for edges definition)
+* graph instantiation from nodes list and edges list or adjacency matrix (`Eigen::MatrixXd` for nodes position and `Eigen::MatrixXi` for edges definition)
 * load / save graphs as `.obj` files
 * graph visualization (using [polyscope](http://polyscope.run/))
 * adding / removing / merging nodes
